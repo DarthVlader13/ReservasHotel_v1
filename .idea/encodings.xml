@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.gitignore" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/.gradle" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/README.md" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/build.gradle" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/gradle" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/gradlew" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/gradlew.bat" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/settings.gradle" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src" charset="ISO-8859-1" />
+  </component>
+</project>
