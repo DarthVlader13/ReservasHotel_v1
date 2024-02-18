@@ -1,14 +1,17 @@
 package org.iesalandalus.programacion.reservashotel.vista;
 
-import org.iesalandalus.programacion.reservashotel.dominio.Huesped;
-import org.iesalandalus.programacion.reservashotel.dominio.Habitacion;
-import org.iesalandalus.programacion.reservashotel.dominio.TipoHabitacion;
-import org.iesalandalus.programacion.reservashotel.dominio.Regimen;
-import org.iesalandalus.programacion.reservashotel.dominio.Reserva;
+import org.iesalandalus.programacion.reservashotel.modelo.dominio.Huesped;
+import org.iesalandalus.programacion.reservashotel.modelo.dominio.Habitacion;
+import org.iesalandalus.programacion.reservashotel.modelo.dominio.TipoHabitacion;
+import org.iesalandalus.programacion.reservashotel.modelo.dominio.Regimen;
+import org.iesalandalus.programacion.reservashotel.modelo.dominio.Reserva;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 
 
 public class Consola {
@@ -67,6 +70,20 @@ public class Consola {
         return fecha;
     }
 
+    //En este método, usamos un bucle do-while que seguirá pidiendo al usuario que introduzca la fecha y hora hasta que proporcione una cadena válida que pueda ser parseada a un objeto LocalDateTime.
+    public static LocalDateTime leerFechaHora(String mensaje) {
+        LocalDateTime fechaHora = null;
+        do {
+            try {
+                System.out.print(mensaje);
+                String fechaHoraStr = Entrada.cadena();
+                fechaHora = LocalDateTime.parse(fechaHoraStr, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+            } catch (DateTimeParseException e) {
+                System.out.println("Error: Formato de fecha y hora incorrecto. El formato correcto es: YYYY-MM-DDTHH:MM");
+            }
+        } while (fechaHora == null);
+        return fechaHora;
+    }
     public static Habitacion leerHabitacion() {
         System.out.print("Introduce el número de planta de la habitación: ");
         int numeroPlanta = Entrada.entero();
