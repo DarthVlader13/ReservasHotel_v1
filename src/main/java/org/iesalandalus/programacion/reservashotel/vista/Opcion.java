@@ -13,7 +13,9 @@ public enum Opcion {
     INSERTAR_RESERVA("Insertar reserva"),
     ANULAR_RESERVA("Anular reserva"),
     MOSTRAR_RESERVAS("Mostrar reservas"),
-    CONSULTAR_DISPONIBILIDAD("Consultar disponibilidad");
+    CONSULTAR_DISPONIBILIDAD("Consultar disponibilidad"),
+    REALIZAR_CHECKIN("Realizar check-in"),
+    REALIZAR_CHECKOUT("Realizar check-out");
 
     private final String mensajeAMostrar;
 
@@ -30,4 +32,3 @@ public enum Opcion {
         return ordinal() + " .- " + mensajeAMostrar;
     }
 }
-
